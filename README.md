@@ -1,25 +1,21 @@
 <p align="center">
-    <img id="studying" src=" " style="height: 100px; width: 900px;">
+    <img id="studying" src="message and streaming platforms.png" style="height: 300px; width: 900px;">
   <text>✨Messaging & Event Streaming Platforms✨</text>
 </p>
 
 <p align="center">
-   <img src=" " alt="alt text" width="400" height="500"/>
+   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="110"/>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
 
-
-
 <p align="center">
     <img id="Modern Java Mastering Features from Java 8 to Java 21" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
 </p>
 
-![Modern Java Mastering Features from Java 8 to Java 21]( Modern%20Java%20Mastering%20Features%20from%20Java%208%20to%20Java%2021%20desc.PNG)
-
-All course material from Modern Java Mastering Features from Java 8 to Java 21
+All course material from Apache Kafka for Developers using Spring Boot
 by **Pragmatic Code School** ©. 
 
 Contains my own notes with some course material to enforce learning experience.
@@ -27,7 +23,7 @@ Contains my own notes with some course material to enforce learning experience.
 <!-- add this comment later 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
 
-[The course at Udemy](https://www.udemy.com/course/modern-java-learn-java-8-features-by-coding-it/). 
+[The course at Udemy](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/). 
 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
@@ -68,4 +64,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- Some
+- [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
+
+- 
