@@ -78,3 +78,4 @@ Getting Started with Kafka.
     - This is used to **pull** data form **external** data source. Example database or Elasticsearch.
 2. There are two **Connectors**. Second one is the **Sink Connector**.
     - The **Sink** is used for other way around it pushes the data to the **external** data source.  
+3. **Kafka Streams** are used **pull** data from the **Kafka** and **performed transformations** from simple to advanced, then putted back into the **Kafka**.

@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="110"/>
+   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
@@ -12,7 +12,7 @@
     - `git config --global core.longpaths true`.
 
 <p align="center">
-    <img id="Modern Java Mastering Features from Java 8 to Java 21" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
+    <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
 </p>
 
 All course material from Apache Kafka for Developers using Spring Boot
@@ -42,10 +42,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Getting Started With the Course.
-- [ ] [Section 02](#) - Course Slides.
-- [ ] [Section 03](#) - Getting Started with Kafka.
-- [ ] [Section 04](#) - Understanding Kafka Components and its Internals - (Theory + ...).
+- [x] [Section 01](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Developers%20using%20Spring%20Boot/Section%2001#section-01-introduction) - Getting Started With the Course. ✅
+- [x] [Section 02](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Developers%20using%20Spring%20Boot/Section%2002) - Course Slides. ✅
+- [x] [Section 03](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Developers%20using%20Spring%20Boot/Section%2003/README.md#section-03-getting-started-with-kafka) - Getting Started with Kafka. ✅
+- [ ] [Section 04](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Developers%20using%20Spring%20Boot/Section%2004/README.md#section-04-understanding-kafka-components-and-its-internals---theory--) - Understanding Kafka Components and its Internals - (Theory + ...). 
 - [ ] [Section 05](#) - Application Overview.
 - [ ] [Section 06](#) - Source Code for this Course.
 - [ ] [Section 07](#) - Build SpringBoot Kafka Producer - Hands On.
