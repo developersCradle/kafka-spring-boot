@@ -66,5 +66,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
 
-- [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2).
+- [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2). ✅
  
+- [x] The commands, which are used in this course. [Here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2/blob/main/SetUpKafkaDocker.md#set-up-broker-and-zookeeper). ✅
