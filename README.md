@@ -1,15 +1,68 @@
 <p align="center">
     <img id="studying" src="message and streaming platforms.png" style="height: 300px; width: 900px;">
-  <text>✨Messaging & Event Streaming Platforms✨</text>
-</p>
-
-<p align="center">
-   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
+  <text> ✨Messaging & Event Streaming Platforms✨ </text>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
+
+<p align="center">
+    <img id="Apache Kafka for Beginners Learn Kafka by Hands On" src="Apache Kafka for Beginners Learn Kafka by Hands On desc.PNG" style=" width: 900px;">
+</p>
+
+All course material from Apache Kafka for Beginners Learn Kafka by Hands On
+by **Pragmatic Code School** ©. 
+
+Contains my own notes with some course material to enforce learning experience.
+
+<!-- add this comment later 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+
+[The course at Udemy](udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/). 
+
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Getting Started with Course.
+- [ ] [Section 02](#) - Course Slides.
+- [ ] [Section 03](#) - Getting Started with Kafka.
+- [ ] [Section 04](#) - Download and Install Kafka.
+- [ ] [Section 05](#) - Source Code for this Course.
+- [ ] [Section 06](#) - Understanding Kafka Components and its Internals - (Theory + Hands On).
+- [ ] [Section 07](#) - Kafka Producer API - Hands On.
+- [ ] [Section 08](#) - Kafka Producer API - Guaranteed Message Delivery Configurations.
+- [ ] [Section 09](#) - Kafka Consumer API - Hands On.
+- [ ] [Section 10](#) - Consumer Groups & Consumer Rebalance - Hands On.
+- [ ] [Section 11](#) - Consumer Offsets - Default and Manual Offset Management - Hands On.
+- [ ] [Section 12](#) - Consumer Rebalance Listeners - Hands On.
+- [ ] [Section 13](#) - Kafka Consumer - seekToBeginning(), seekToEnd() & seek() - Hands On.
+- [ ] [Section 14](#) - Custom Serializer and Deserializers in Kafka - Hands On.
+- [ ] [Section 15](#) - Bonus Section.
+
+#### Additional stuff.
+
+- [ ] Todo.
+
+
+<p align="center">
+   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
+</p>
+
 
 <p align="center">
     <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
