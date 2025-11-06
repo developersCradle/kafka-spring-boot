@@ -1,29 +1,9 @@
-# Section 01: Introduction.
+# Section 05: Source Code for this Course.
 
-Introduction.
+Source Code for this Course.
 
 # What I learned.
 
-# Course Introduction & Objectives.
+# Source Code.
 
-<div align="center">
-    <img src="targettedAudiance.PNG"  alt="java advanced" width="500"/>
-</div>
-
-<div align="center">
-    <img src="aboutMe.PNG"  alt="java advanced" width="500"/>
-</div>
-
-<div align="center">
-    <img src="whatCovered.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. Lot of hands on exercises will be made.
-
-# Pre-Requesities.
-
-<div align="center">
-    <img src="coursePrerequisitives.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. This work is considering to be plus.
+- For the commands [source](https://github.com/dilipsundarraj1/kafka-for-beginners/blob/master/SetUpKafka.md).

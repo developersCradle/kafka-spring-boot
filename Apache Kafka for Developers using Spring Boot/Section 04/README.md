@@ -51,7 +51,8 @@ Understanding Kafka Components and its Internals - (Theory + ...).
     <img src="topicAndPartitionThird.PNG"  alt="java advanced" width="700"/>
 </div>
 
-1. **Kafka Producer** produces messages to the **Partitions**. They get appended to the appropriate partions line, at the end! 
+1. **Kafka Producer** produces messages to the **Partitions**. They get appended to the **appropriate** partion line, at the end!
+    - Producer has control, to which **Partition** the message goes.
 
 # SetUp a Zookeeper/Kafka Broker in Local.
 

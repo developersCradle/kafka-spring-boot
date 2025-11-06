@@ -1,29 +1,16 @@
-# Section 01: Introduction.
+# Section 04: Download and Install Kafka.
 
-Introduction.
+Download and Install Kafka.
 
 # What I learned.
 
-# Course Introduction & Objectives.
+# Download and Install Kafka.
 
+- [Kafka](https://kafka.apache.org/downloads) source link.
+
+- These folders come from the **Kafka**, once downloaded.
 <div align="center">
-    <img src="targettedAudiance.PNG"  alt="java advanced" width="500"/>
+    <img src="downloadingTheKafka.PNG"  alt="java advanced" width="800"/>
 </div>
 
-<div align="center">
-    <img src="aboutMe.PNG"  alt="java advanced" width="500"/>
-</div>
-
-<div align="center">
-    <img src="whatCovered.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. Lot of hands on exercises will be made.
-
-# Pre-Requesities.
-
-<div align="center">
-    <img src="coursePrerequisitives.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. This work is considering to be plus.
+1. We can produce entries to the topic using these scripts.

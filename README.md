@@ -1,11 +1,24 @@
 <p align="center">
-    <img id="studying" src="message and streaming platforms.png" style="height: 300px; width: 900px;">
+    <img id="studying" src="MessaggingAndEventStreamingPlatform.gif" style="height: 300px; width: 600px;">
   <text> ✨Messaging & Event Streaming Platforms✨ </text>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
+
+<details>
+
+<summary id="Kafka the progress" open="true"> <b>Kafka course map!</b> </summary>
+
+<br>
+<p align="center">
+    <img src="addHere.JPG" alt="reactive programming" width="700"/>
+</p>
+
+1. Add here. [Course](#).
+
+</details>
 
 <p align="center">
     <img id="Apache Kafka for Beginners Learn Kafka by Hands On" src="Apache Kafka for Beginners Learn Kafka by Hands On desc.PNG" style=" width: 900px;">
@@ -21,7 +34,6 @@ This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE
 
 [The course at Udemy](udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/). 
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
@@ -33,16 +45,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     Insert certificate here when completed
 </div>
 
-
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Getting Started with Course.
-- [ ] [Section 02](#) - Course Slides.
-- [ ] [Section 03](#) - Getting Started with Kafka.
-- [ ] [Section 04](#) - Download and Install Kafka.
-- [ ] [Section 05](#) - Source Code for this Course.
+- [x] [Section 01](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2001/README.md#section-01-introduction) - Getting Started with Course. ✅
+- [x] [Section 02](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2002/README.md#section-02-course-slides) - Course Slides. ✅
+- [x] [Section 03](#) - Getting Started with Kafka. ✅
+- [x] [Section 04](#) - Download and Install Kafka. ✅
+- [x] [Section 05](#) - Source Code for this Course. ✅
 - [ ] [Section 06](#) - Understanding Kafka Components and its Internals - (Theory + Hands On).
 - [ ] [Section 07](#) - Kafka Producer API - Hands On.
 - [ ] [Section 08](#) - Kafka Producer API - Guaranteed Message Delivery Configurations.
@@ -56,13 +67,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] Todo.
-
+- [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-beginners). ✅
 
 <p align="center">
-   <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
+       <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
 </p>
-
 
 <p align="center">
     <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
