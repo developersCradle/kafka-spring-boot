@@ -14,3 +14,6 @@ Download and Install Kafka.
 </div>
 
 1. We can produce entries to the topic using these scripts.
+
+> [!IMPORTANT]
+> Notice the **ZooKeepper** is completely removed it from some versions!

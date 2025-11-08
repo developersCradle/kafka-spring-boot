@@ -1,6 +1,5 @@
 <p align="center">
     <img id="studying" src="MessaggingAndEventStreamingPlatform.gif" style="height: 300px; width: 600px;">
-  <text> ✨Messaging & Event Streaming Platforms✨ </text>
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
