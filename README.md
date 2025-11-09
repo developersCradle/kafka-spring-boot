@@ -13,7 +13,7 @@
 <br>
 
 <p align="center">
-    <img src="courseMap.png" alt="reactive programming" width="500"/>
+    <img src="courseMap.png" alt="reactive programming" width="400"/>
 </p>
 
 1. You can take this course first: [Apache Kafka for Beginners - Learn Kafka by Hands-On](https://www.udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/).
@@ -70,6 +70,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-beginners). ✅
+- [ ] Check the running with the `.sh` in widows ZooKeepper and the Kafka server.
+
 
 <p align="center">
        <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
