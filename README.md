@@ -1,5 +1,5 @@
 <p align="center">
-    <img id="studying" src="MessaggingAndEventStreamingPlatform.gif" style="height: 300px; width: 600px;">
+    <img id="studying" src="message and streaming platforms.png" style="height: 300px; width: 600px;">
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
@@ -11,11 +11,14 @@
 <summary id="Kafka the progress" open="true"> <b>Kafka course map!</b> </summary>
 
 <br>
+
 <p align="center">
-    <img src="addHere.JPG" alt="reactive programming" width="700"/>
+    <img src="courseMap.png" alt="reactive programming" width="500"/>
 </p>
 
-1. Add here. [Course](#).
+1. You can take this course first: [Apache Kafka for Beginners - Learn Kafka by Hands-On](https://www.udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/).
+2. You can take the this course second: [Apache Kafka for Developers using Spring Boot LatestEdition](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/?).
+
 
 </details>
 
@@ -48,12 +51,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2001/README.md#section-01-introduction) - Getting Started with Course. ✅
+- [x] [Section 01](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2001#section-01-introduction) - Getting Started with Course. ✅
 - [x] [Section 02](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2002/README.md#section-02-course-slides) - Course Slides. ✅
-- [x] [Section 03](#) - Getting Started with Kafka. ✅
-- [x] [Section 04](#) - Download and Install Kafka. ✅
-- [x] [Section 05](#) - Source Code for this Course. ✅
-- [ ] [Section 06](#) - Understanding Kafka Components and its Internals - (Theory + Hands On).
+- [x] [Section 03](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2003#section-03-getting-started-with-kafka) - Getting Started with Kafka. ✅
+- [x] [Section 04](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2004#section-04-download-and-install-kafka) - Download and Install Kafka. ✅
+- [x] [Section 05](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2005/README.md#section-05-source-code-for-this-course) - Source Code for this Course. ✅
+- [ ] [Section 06](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2006#section-06-understanding-kafka-components-and-its-internals---theory--hands-on) - Understanding Kafka Components and its Internals - (Theory + Hands On).
 - [ ] [Section 07](#) - Kafka Producer API - Hands On.
 - [ ] [Section 08](#) - Kafka Producer API - Guaranteed Message Delivery Configurations.
 - [ ] [Section 09](#) - Kafka Consumer API - Hands On.

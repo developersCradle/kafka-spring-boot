@@ -1,29 +1,5 @@
-# Section 01: Introduction.
+# Section 07: Kafka Producer API - Hands On.
 
-Introduction.
+Kafka Producer API - Hands On.
 
 # What I learned.
-
-# Course Introduction & Objectives.
-
-<div align="center">
-    <img src="targettedAudiance.PNG"  alt="java advanced" width="500"/>
-</div>
-
-<div align="center">
-    <img src="aboutMe.PNG"  alt="java advanced" width="500"/>
-</div>
-
-<div align="center">
-    <img src="whatCovered.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. Lot of hands on exercises will be made.
-
-# Pre-Requesities.
-
-<div align="center">
-    <img src="coursePrerequisitives.PNG"  alt="java advanced" width="500"/>
-</div>
-
-1. This work is considering to be plus.

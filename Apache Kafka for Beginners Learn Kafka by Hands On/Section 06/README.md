@@ -71,9 +71,26 @@ Understanding Kafka Components and its Internals - (Theory + Hands On).
 
 - We can check the instruction from [here](https://github.com/dilipsundarraj1/kafka-for-beginners/blob/master/SetUpKafka.md)
 
-   
-   
-   
+> [!IMPORTANT]
+> Remember to place the **Kafka** to local drive to prevent the too long character error!
+
+- We are starting the **ZooKeepper** in our local machine!
+    - `zookeeper-server-start.bat ..\..\config\zookeeper.properties`.
+
+<div align="center">
+    <img src="startingTheZooKeeper.gif"  alt="java advanced" width="700"/>
+</div>
+
+- We see that it's running at port `2181`.
+
+- Change the **Broker** configs `server.properties`.
+
+- We need to start the **Broker**.
+    - We are starting the **Kafka Broker** with our config files.
+        - `kafka-server-start.bat ..\..\config\server.properties`.
+
+
+
    
     <!-- - Check the different **services** `zoo1` and `kafka`. -->
 

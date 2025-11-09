@@ -7,6 +7,8 @@ Download and Install Kafka.
 # Download and Install Kafka.
 
 - [Kafka](https://kafka.apache.org/downloads) source link.
+    - I downloaded the version `kafka_2.12-2.3.1`.
+        - This included the **ZooKeeper**!
 
 - These folders come from the **Kafka**, once downloaded.
 <div align="center">
