@@ -130,6 +130,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- [ ] `Integration Testing using Embedded Kafka - Kafka Consumer` do for now.
 - [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
 
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2). ✅
