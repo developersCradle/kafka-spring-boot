@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-//@KafkaListener
 public class LibraryEventsConsumer {
 
     @Autowired

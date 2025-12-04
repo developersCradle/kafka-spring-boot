@@ -1,29 +1,27 @@
-# Section 01: Introduction.
+# Section 14: Persisting Library Events in DB - Using H2 InMemory Database.
 
-Introduction.
+ Persisting Library Events in DB - Using H2 InMemory Database.
 
 # What I learned.
 
-# Course Introduction & Objectives.
+# Custom Error Handler and Custom Retry in Kafka Consumer.
 
-<div align="center">
-    <img src="targettedAudiance.PNG"  alt="java advanced" width="500"/>
-</div>
+# Add a RetryListener to monitor each Retry attempt.
 
-<div align="center">
-    <img src="aboutMe.PNG"  alt="java advanced" width="500"/>
-</div>
+# Retry Specific Exceptions using Custom RetryPolicy.
 
-<div align="center">
-    <img src="whatCovered.PNG"  alt="java advanced" width="500"/>
-</div>
+# Retry failed Records with ExponentialBackOff.
 
-1. Lot of hands on exercises will be made.
+# Recovery in Kafka Consumer.
 
-# Pre-Requesities.
+# Recovery: Publish the message to the Retry Topic.
 
-<div align="center">
-    <img src="coursePrerequisitives.PNG"  alt="java advanced" width="500"/>
-</div>
+# Build the RetryTopic Listener to reprocess the Message.
 
-1. This work is considering to be plus.
+# Refactor the LibraryEventsConsumer Integration Test.
+
+# Recovery: Publish the message to the DeadLetter Topic.
+
+# Recovery: Save the failed message to the DB.
+   
+# Recovery: Spring Scheduler to recover the failed message.

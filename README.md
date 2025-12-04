@@ -31,8 +31,9 @@ by **Pragmatic Code School** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-<!-- add this comment later 
-This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+Also, the course projects are migrated to the use the ![Maven](https://img.shields.io/badge/apachemaven-C71A36.svg?style=for-the-badge&logo=apachemaven&logoColor=white) since I am more familiar with it.
 
 [The course at Udemy](udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/). 
 
@@ -69,6 +70,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- [ ] Migrate all projects into Maven projects.
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-beginners). ✅
 - [ ] Check the running with the `.sh` in widows ZooKeepper and the Kafka server.
 
@@ -86,8 +88,9 @@ by **Pragmatic Code School** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-<!-- add this comment later 
-This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️ -->
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+Also, the course projects are migrated to the use the ![Maven](https://img.shields.io/badge/apachemaven-C71A36.svg?style=for-the-badge&logo=apachemaven&logoColor=white) since I am more familiar with it.
 
 [The course at Udemy](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/). 
 
@@ -122,7 +125,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 12](#) - Build SpringBoot Kafka Consumer - Hands On.
 - [ ] [Section 13](#) - Consumer Groups and Consumer Offset Management - Hands On.
 - [ ] [Section 14](#) - Persisting Library Events in DB - Using H2 InMemory Database.
-- [ ] [Section 15](#) - Integration Testing using Embedded Kafka - Kafka Consumer.
+- [ ] [Section 15](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Developers%20using%20Spring%20Boot/Section%2015#section-15-integration-testing-using-embedded-kafka---kafka-consumer) - Integration Testing using Embedded Kafka - Kafka Consumer.
 - [ ] [Section 16](#) - Error Handling, Retry and Recovery - Kafka Consumers.
 - [ ] [Section 17](#) - Error Handling, Retry and Recovery - Kafka Producer.
 - [ ] [Section 18](#) - Kafka Security using SSL - Hands On.
@@ -132,7 +135,5 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] `Integration Testing using Embedded Kafka - Kafka Consumer` do for now.
 - [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
-
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2). ✅
- 
 - [x] The commands, which are used in this course. [Here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2/blob/main/SetUpKafkaDocker.md#set-up-broker-and-zookeeper). ✅
