@@ -3,4 +3,3 @@
 Kafka Producer API - Guaranteed Message Delivery Configurations.
 
 # What I learned.
-W

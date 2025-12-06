@@ -19,7 +19,6 @@
 1. You can take this course first: [Apache Kafka for Beginners - Learn Kafka by Hands-On](https://www.udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/).
 2. You can take the this course second: [Apache Kafka for Developers using Spring Boot LatestEdition](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/?).
 
-
 </details>
 
 <p align="center">
@@ -31,7 +30,7 @@ by **Pragmatic Code School** ©.
 
 > I was faced with speedy deadlines for integrating crucial bank connections. During testing, some of the embedded Kafka test pieces were behaving strangely, and messages weren’t being consumed as expected.
 >
-> Thankfully, a recent course I had taken proved crucial. It helped me pinpoint subtle serialization issues in the Kafka workflows<br>
+> Thankfully, a recent course I had taken proved crucial. It helped me pinpoint subtle serialization issues in the Kafka workflows<br><br>
 ~ DevelopersCradle
 
 Contains my own notes with some course material to enforce learning experience.
@@ -63,33 +62,36 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 04](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2004#section-04-download-and-install-kafka) - Download and Install Kafka. ✅
 - [x] [Section 05](https://github.com/developersCradle/kafka-spring-boot/blob/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2005/README.md#section-05-source-code-for-this-course) - Source Code for this Course. ✅
 - [ ] [Section 06](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2006#section-06-understanding-kafka-components-and-its-internals---theory--hands-on) - Understanding Kafka Components and its Internals - (Theory + Hands On).
-- [ ] [Section 07](#) - Kafka Producer API - Hands On.
-- [ ] [Section 08](#) - Kafka Producer API - Guaranteed Message Delivery Configurations.
-- [ ] [Section 09](#) - Kafka Consumer API - Hands On.
-- [ ] [Section 10](#) - Consumer Groups & Consumer Rebalance - Hands On.
-- [ ] [Section 11](#) - Consumer Offsets - Default and Manual Offset Management - Hands On.
-- [ ] [Section 12](#) - Consumer Rebalance Listeners - Hands On.
+- [ ] [Section 07](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2007#section-07-kafka-producer-api---hands-on) - Kafka Producer API - Hands On.
+- [ ] [Section 08](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2008#section-08-kafka-producer-api---guaranteed-message-delivery-configurations) - Kafka Producer API - Guaranteed Message Delivery Configurations.
+- [ ] [Section 09](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2009#section-09-kafka-consumer-api---hands-on) - Kafka Consumer API - Hands On.
+- [ ] [Section 10](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2010#section-10-consumer-groups--consumer-rebalance---hands-on) - Consumer Groups & Consumer Rebalance - Hands On.
+- [ ] [Section 11](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2011#section-11-consumer-offsets---default-and-manual-offset-management---hands-on) - Consumer Offsets - Default and Manual Offset Management - Hands On.
+- [ ] [Section 12](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2012#section-12-consumer-rebalance-listeners---hands-on) - Consumer Rebalance Listeners - Hands On.
 - [ ] [Section 13](#) - Kafka Consumer - seekToBeginning(), seekToEnd() & seek() - Hands On.
-- [ ] [Section 14](#) - Custom Serializer and Deserializers in Kafka - Hands On.
+- [ ] [Section 14](https://github.com/developersCradle/kafka-spring-boot/tree/main/Apache%20Kafka%20for%20Beginners%20Learn%20Kafka%20by%20Hands%20On/Section%2014#section-14-custom-serializer-and-deserializers-in-kafka---hands-on) - Custom Serializer and Deserializers in Kafka - Hands On.
 - [ ] [Section 15](#) - Bonus Section.
 
 #### Additional stuff.
 
 - [ ] Migrate all projects into Maven projects.
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-beginners). ✅
-- [ ] Check the running with the `.sh` in widows ZooKeepper and the Kafka server.
+- [ ] Check the running with the `.sh` in widows `ZooKeepper` and the Kafka server.
 
 
 <p align="center">
-       <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" width="800" height="130"/>
+       <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" style="width: 800px; height:140px"/>
 </p>
 
 <p align="center">
-    <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style=" width: 900px;">
+    <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style="width: 900px;">
 </p>
 
 All course material from Apache Kafka for Developers using Spring Boot
 by **Pragmatic Code School** ©. 
+
+> Add here some cool story!<br><br>
+~ DevelopersCradle
 
 Contains my own notes with some course material to enforce learning experience.
 

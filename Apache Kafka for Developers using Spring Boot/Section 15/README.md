@@ -155,6 +155,8 @@ producer:
     value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 ````
+- Todo check and write the `StringSerializer`.
+
 
 <div align="center">
     <img src="templateClassesInGeneralInSpring.jpeg"  alt="Apache Kafka for Developers using Spring Boot" width="600"/>
@@ -194,12 +196,7 @@ KafkaTemplate<Integer, String> kafkaTemplate;
     KafkaTemplate<Integer, String> kafkaTemplate;
 
     kafkaTemplate.send("test-topic", 1, "Hello Kafka!");
-
     ````
-
-
-
-
 
 <details>
 <summary id="IDE problem" open="false">Full configuration for these <b>Kafka</b> <code>application.yml</code>.</summary>
@@ -240,7 +237,6 @@ spring:
   h2:
     console:
       enabled: true
-
 ---
 
 # For the non-production!
