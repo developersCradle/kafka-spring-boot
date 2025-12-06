@@ -4,6 +4,9 @@ spring:
 server:
   port: 8081
 ---
+
+# For the local!
+
 spring:
   config:
     activate:
@@ -31,7 +34,12 @@ spring:
     console:
       enabled: true
 
+
+
 ---
+
+# For the non-production!
+
 spring:
   config:
     activate:

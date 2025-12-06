@@ -29,6 +29,11 @@
 All course material from Apache Kafka for Beginners Learn Kafka by Hands On
 by **Pragmatic Code School** ©. 
 
+> I was faced with speedy deadlines for integrating crucial bank connections. During testing, some of the embedded Kafka test pieces were behaving strangely, and messages weren’t being consumed as expected.
+>
+> Thankfully, a recent course I had taken proved crucial. It helped me pinpoint subtle serialization issues in the Kafka workflows<br>
+~ DevelopersCradle
+
 Contains my own notes with some course material to enforce learning experience.
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️

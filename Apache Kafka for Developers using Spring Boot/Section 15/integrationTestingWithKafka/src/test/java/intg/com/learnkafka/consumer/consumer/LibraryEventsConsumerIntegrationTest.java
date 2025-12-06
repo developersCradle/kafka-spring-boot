@@ -16,42 +16,38 @@ import org.apache.kafka.common.serialization.IntegerDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.core.env.Environment;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
-import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.listener.MessageListenerContainer;
 import org.springframework.kafka.test.EmbeddedKafkaBroker;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.kafka.test.utils.ContainerTestUtils;
-import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.TestPropertySource;
 
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(classes = LibraryEventsConsumerApplication.class)
-@EmbeddedKafka(topics = {"library-events"
-        , "library-events.RETRY"
-        , "library-events.DLT"
-}
-        , partitions = 3)
-@TestPropertySource(properties = {"spring.kafka.producer.bootstrap-servers=${spring.embedded.kafka.brokers}"
-        , "spring.kafka.consumer.bootstrap-servers=${spring.embedded.kafka.brokers}"
-        , "retryListener.startup=false"})
+@EmbeddedKafka(topics = {
+        "library-events",
+        "library-events.RETRY",
+        "library-events.DLT" },
+        partitions = 3)
+@TestPropertySource(properties = {
+        "spring.kafka.producer.bootstrap-servers = ${spring.embedded.kafka.brokers}",
+        "spring.kafka.consumer.bootstrap-servers=${spring.embedded.kafka.brokers}",
+        "retryListener.startup=false"})
 public class LibraryEventsConsumerIntegrationTest {
 
 
@@ -76,6 +72,8 @@ public class LibraryEventsConsumerIntegrationTest {
     @Autowired
     ObjectMapper objectMapper;
 
+    @Autowired
+    Environment env;
 
     @BeforeEach
     void setUp() {
@@ -90,6 +88,12 @@ public class LibraryEventsConsumerIntegrationTest {
         libraryEventsRepository.deleteAll();
 
     }
+
+    @Test
+    void showBrokers() {
+        System.out.println(env.getProperty("spring.embedded.kafka.brokers"));
+    }
+
 
     @Test
     void publishNewLibraryEvent() throws ExecutionException, InterruptedException, JsonProcessingException {

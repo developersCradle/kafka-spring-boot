@@ -6,8 +6,7 @@ Integration Testing using Embedded Kafka - Kafka Consumer.
 
 # Configure Embedded Kafka for Integration Tests.
 
-- We will be writing **test** for Consumer. For following **Consumer**
-
+- We will be writing **test** for following **Consumer**:
 
 ````
 package com.learnkafka.consumer;
@@ -31,10 +30,8 @@ public class LibraryEventsConsumer {
             topics = {"library-events"}
             , groupId = "library-events-listener-group")
     public void onMessage(ConsumerRecord<Integer, String> consumerRecord) throws JsonProcessingException {
-
         log.info("ConsumerRecord : {} ", consumerRecord);
         libraryEventsService.processLibraryEvent(consumerRecord);
-
     }
 }
 ````
@@ -42,17 +39,19 @@ public class LibraryEventsConsumer {
 - Todo check this, selvitä mistä tutoriaalista tämä pätkä selvitetään:
 
 ````
-@EmbeddedKafka(topics = {"library-events"
-        , "library-events.RETRY"
-        , "library-events.DLT"
-}
-        , partitions = 3)
-@TestPropertySource(properties = {"spring.kafka.producer.bootstrap-servers=${spring.embedded.kafka.brokers}"
-        , "spring.kafka.consumer.bootstrap-servers=${spring.embedded.kafka.brokers}"
-        , "retryListener.startup=false"})
+@SpringBootTest(classes = LibraryEventsConsumerApplication.class)
+@EmbeddedKafka(topics = {
+        "library-events",
+        "library-events.RETRY",
+        "library-events.DLT" },
+        partitions = 3)
+@TestPropertySource(properties = {
+        "spring.kafka.producer.bootstrap-servers = ${spring.embedded.kafka.brokers}",
+        "spring.kafka.consumer.bootstrap-servers=${spring.embedded.kafka.brokers}",
+        "retryListener.startup=false"})
 ````
 
-- The test, which we are writing will be using the:
+- The **test**, which we are writing will be using the:
     -  `@SpringBootTest(classes = LibraryEventsConsumerApplication.class)`.
         - The `@SpringBootTest()` will be starting as in **production**. This will load the:
             - The full Spring context.
@@ -68,7 +67,7 @@ public class LibraryEventsConsumer {
 > [!NOTE]
 > A **Kafka broker** = single running Kafka instance.
 
-- We will be spinning up, in memory Kafka **Embedded Kafka**: 
+- We will be spinning up, in memory **Kafka Embedded Kafka**: 
 
 ````
 @EmbeddedKafka(topics = {"library-events"
@@ -78,8 +77,187 @@ public class LibraryEventsConsumer {
 ````
 
 - We will be spinning up, with the **Test Properties**, we can use this for **override** application properties for the test class. 
+    - `@TestPropertySource(...)`
 
-- `@TestPropertySource(...)`
+- For the following fields goes inside **...**.
+    - `properties = {"spring.kafka.producer.bootstrap-servers=${spring.embedded.kafka.brokers}"`.
+        - Tells to replace following config line: `spring.kafka.producer.bootstrap-servers` inside `.yml`.
+            - With following: `${spring.embedded.kafka.brokers}`.
+                - `spring.embedded.kafka.brokers` is:
+                    - **Auto-created** by `@EmbeddedKafka`.
+                    - **Contains** the `host`:`port` of the **embedded Kafka Server**.
+                    - Available **ONLY** in the test environment.
+                        - **Used** to override your real Kafka settings during tests.
+
+
+- Currently, the test looks like following: 
+
+````
+@SpringBootTest(classes = LibraryEventsConsumerApplication.class)
+@EmbeddedKafka(topics = {
+        "library-events",
+        "library-events.RETRY",
+        "library-events.DLT" },
+        partitions = 3)
+@TestPropertySource(properties = {
+        "spring.kafka.producer.bootstrap-servers = ${spring.embedded.kafka.brokers}",
+        "spring.kafka.consumer.bootstrap-servers=${spring.embedded.kafka.brokers}",
+        "retryListener.startup=false"})
+public class LibraryEventsConsumerIntegrationTest
+{
+... Test code here ...
+}
+````
+
+- We can **verify**, with actual `IP`:`port` of the **Embedded Kafka Broker** during your test:
+
+````
+@Autowired
+Environment env;
+
+@Test
+void showBrokers() {
+    System.out.println(env.getProperty("spring.embedded.kafka.brokers"));
+}
+````
+
+- The **Environment** is from: `import org.springframework.core.env.Environment;`.
+
+- You can see the assigned **IP:PORT** during the test, from Logs:
+
+````
+127.0.0.1:52523
+````
+
+- Logging can be seen from the `GIF`:
+
+<div align="center">
+    <img src="spring.embedded.kafka.brokers test logging.gif"  alt="Apache Kafka for Developers using Spring Boot" width="600"/>
+</div>
+
+> [!TIP]
+> **Remember** in Spring prefers using Spring-managed beans in its components. Example of that is using the`@Autowired`.
+
+
+- We **inject** instance of the `EmbeddedKafkaBroker` into our **test** class for us to use it later. Like in real world cases, this **Kafka Broker** is holding the **Kafka Topics**.
+    
+````
+    @Autowired
+    EmbeddedKafkaBroker embeddedKafkaBroker;
+````
+
+- For the test we need to configure the **Kafka Producer**:
+
+````
+producer:
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+    key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+    value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+````
+
+<div align="center">
+    <img src="templateClassesInGeneralInSpring.jpeg"  alt="Apache Kafka for Developers using Spring Boot" width="600"/>
+</div>
+
+- There is some `Template` examples:
+    - `JdbcTemplate` Execute **SQL** queries on a relational database.
+    - `RestTemplate` Send HTTP requests to **REST** endpoints.
+        - You can see one example of such choice [here](https://github.com/developersCradle/springboot-microservices/tree/main?tab=readme-ov-file#architecture-explanation).
+    - `KafkaTemplate` Send messages to **Kafka** topics.
+    - `JmsTemplate` Send and receive messages via **JMS**.
+    - `RabbitTemplate` Send and receive messages via **RabbitMQ**.
+
+> [!NOTE]
+> This is no different in **Kafka** as well see the → `KafkaTemplate`.
+
+````
+@Autowired
+KafkaTemplate<Integer, String> kafkaTemplate;
+````
+
+- The **KafkaTempate** makes sending **Kafka** messages much simpler, see below:
+    - The without **KafkaTemplate**, we need to write a lot of **boiler code**:
+    ````
+    Properties props = new Properties();
+    props.put("bootstrap.servers", "localhost:9092");
+    props.put("key.serializer", IntegerSerializer.class.getName());
+    props.put("value.serializer", StringSerializer.class.getName());
+
+    Producer<Integer, String> producer = new KafkaProducer<>(props);
+    producer.send(new ProducerRecord<>("test-topic", 1, "Hello"));
+    producer.close();
+    ````
+    - The with The **KafkaTemplate**:
+    ````
+    @Autowired
+    KafkaTemplate<Integer, String> kafkaTemplate;
+
+    kafkaTemplate.send("test-topic", 1, "Hello Kafka!");
+
+    ````
+
+
+
+
+
+<details>
+<summary id="IDE problem" open="false">Full configuration for these <b>Kafka</b> <code>application.yml</code>.</summary>
+
+````
+spring:
+  profiles:
+    active: local
+server:
+  port: 8081
+---
+
+# For the local!
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  kafka:
+    template:
+      default-topic: library-events
+    consumer:
+      bootstrap-servers:  localhost:9092,localhost:9093,localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: library-events-listener-group
+    producer:
+      bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+  h2:
+    console:
+      enabled: true
+
+---
+
+# For the non-production!
+
+spring:
+  config:
+    activate:
+      on-profile: nonprod
+  kafka:
+    consumer:
+      bootstrap-servers: nonprod:9092,nonprod:9093,nonprod:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+````
+</schema>
+</details>
+
 
 
 
