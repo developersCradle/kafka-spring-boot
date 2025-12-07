@@ -31,7 +31,7 @@ by **Pragmatic Code School** ©.
 > I was faced with speedy deadlines for integrating crucial bank connections. During testing, some of the embedded Kafka test pieces were behaving strangely, and messages weren’t being consumed as expected.
 >
 > Thankfully, a recent course I had taken proved crucial. It helped me pinpoint subtle serialization issues in the Kafka workflows<br><br>
-~ DevelopersCradle
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -91,7 +91,7 @@ All course material from Apache Kafka for Developers using Spring Boot
 by **Pragmatic Code School** ©. 
 
 > Add here some cool story!<br><br>
-~ DevelopersCradle
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 

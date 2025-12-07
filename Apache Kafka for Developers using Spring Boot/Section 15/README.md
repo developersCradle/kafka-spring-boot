@@ -138,7 +138,6 @@ void showBrokers() {
 > [!TIP]
 > **Remember** in Spring prefers using Spring-managed beans in its components. Example of that is using the`@Autowired`.
 
-
 - We **inject** instance of the `EmbeddedKafkaBroker` into our **test** class for us to use it later. Like in real world cases, this **Kafka Broker** is holding the **Kafka Topics**.
     
 ````
@@ -146,17 +145,29 @@ void showBrokers() {
     EmbeddedKafkaBroker embeddedKafkaBroker;
 ````
 
-- For the test we need to configure the **Kafka Producer**:
+- For the test we need to configure the **Kafka Producer** and for **sd**:
 
 ````
-producer:
+  consumer:
+    bootstrap-servers:  localhost:9092,localhost:9093,localhost:9094
+    key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    group-id: library-events-listener-group
+  producer:
     bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
     key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
     value-serializer: org.apache.kafka.common.serialization.StringSerializer
-
 ````
-- Todo check and write the `StringSerializer`.
 
+> We need to provide these **serializers** so that every message `value` or `key` you send is a **converted** appropriately, since **Kafka** is NOT aware of Java types.
+
+- Here, we are providing the **Kafka** the configurations that it will need for the deserialization and serialization.
+  - **Producer** serializers:
+    - `IntegerSerializer` → convert **Integer** into **bytes**.
+    - `StringSerializer` → convert **String** into **bytes**.
+  - **Consumer** deserializers:
+    - `IntegerDeserializer` → convert **bytes** back into **Integer**.
+    - `StringDeserializer` → convert **bytes** back into **String**.
 
 <div align="center">
     <img src="templateClassesInGeneralInSpring.jpeg"  alt="Apache Kafka for Developers using Spring Boot" width="600"/>
@@ -253,8 +264,6 @@ spring:
 ````
 </schema>
 </details>
-
-
 
 
 # Write the Integration test for posting a "NEW" LibraryEvent.
