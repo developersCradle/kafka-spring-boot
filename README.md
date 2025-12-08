@@ -39,7 +39,7 @@ This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/Inte
 
 Also, the course projects are migrated to the use the ![Maven](https://img.shields.io/badge/apachemaven-C71A36.svg?style=for-the-badge&logo=apachemaven&logoColor=white) since I am more familiar with it.
 
-[The course at Udemy](udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/). 
+[The course at Udemy](https:/udemy.com/course/apache-kafka-deep-dive-hands-on-using-javabuilt-in-scripts/). 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
@@ -90,8 +90,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 All course material from Apache Kafka for Developers using Spring Boot
 by **Pragmatic Code School** ©. 
 
-> Add here some cool story!<br><br>
-~ *DevelopersCradle*
+> A tight delivery schedule forced me to integrate several critical banking streams in record time. While running the tests, the embedded Kafka setup began acting unpredictably—messages vanished, consumers stalled, and nothing made sense at first.
+>
+> Luckily, I had completed a training not long before, and one of its modules clicked immediately. It guided me straight to the root cause: a hidden mismatch in the Kafka serialization layer that was quietly breaking the entire flow.
+<br>
+~ DevelopersCradle
 
 Contains my own notes with some course material to enforce learning experience.
 

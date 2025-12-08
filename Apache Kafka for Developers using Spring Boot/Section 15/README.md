@@ -145,7 +145,7 @@ void showBrokers() {
     EmbeddedKafkaBroker embeddedKafkaBroker;
 ````
 
-- For the test we need to configure the **Kafka Producer** and for **sd**:
+- For the test we need to configure the **Kafka Producer** and for **Kafka Consumer**:
 
 ````
   consumer:
@@ -208,6 +208,35 @@ KafkaTemplate<Integer, String> kafkaTemplate;
 
     kafkaTemplate.send("test-topic", 1, "Hello Kafka!");
     ````
+
+- Configuring the point to which topic the **message** is sent to! The **template** will be used for sending the messages.
+
+````
+spring:
+  kafka:
+    template:
+      default-topic: library-events
+````
+
+- We need to have way to check that **Kafka** is setted correctly.
+````
+    @BeforeEach
+    void setUp() {
+        for (MessageListenerContainer messageListenerContainer : endpointRegistry.getListenerContainers()) {
+            ContainerTestUtils.waitForAssignment(messageListenerContainer, embeddedKafkaBroker.getPartitionsPerTopic());
+        }
+    }
+````
+
+- The `KafkaListenerEndpointRegistry` holds the **listener containers**.
+  - Todo selvitä tämö
+````
+    @Autowired
+    KafkaListenerEndpointRegistry endpointRegistry;
+````
+
+
+
 
 <details>
 <summary id="IDE problem" open="false">Full configuration for these <b>Kafka</b> <code>application.yml</code>.</summary>
