@@ -76,8 +76,8 @@ public class LibraryEventsConsumer {
 }
 ````
 
-- We will be spinning up, with the **Test Properties**, we can use this for **override** application properties for the test class. 
-    - `@TestPropertySource(...)`
+- We will be spinning up, with the **Test Properties**, we can use this for **override** application properties for the test class.
+    - `@TestPropertySource(...)`.
 
 - For the following fields goes inside **...**.
     - `properties = {"spring.kafka.producer.bootstrap-servers=${spring.embedded.kafka.brokers}"`.
@@ -88,7 +88,6 @@ public class LibraryEventsConsumer {
                     - **Contains** the `host`:`port` of the **embedded Kafka Server**.
                     - Available **ONLY** in the test environment.
                         - **Used** to override your real Kafka settings during tests.
-
 
 - Currently, the test looks like following: 
 
@@ -129,10 +128,10 @@ void showBrokers() {
 127.0.0.1:52523
 ````
 
-- Logging can be seen from the `GIF`:
+- Logging can be seen from the `GIF` in action.
 
 <div align="center">
-    <img src="spring.embedded.kafka.brokers test logging.gif"  alt="Apache Kafka for Developers using Spring Boot" width="600"/>
+    <img src="spring.embedded.kafka.brokers test logging.gif"  alt="Apache Kafka for Developers using Spring Boot" width="700"/>
 </div>
 
 > [!TIP]
@@ -218,7 +217,31 @@ spring:
       default-topic: library-events
 ````
 
-- We need to have way to check that **Kafka** is setted correctly.
+- Every `@KafkaListener` becomes a **Listener Container**, and this `KafkaListenerEndpointRegistry` keeps **track of them**, as below the example:
+
+````
+    @Autowired
+    KafkaListenerEndpointRegistry endpointRegistry;
+````
+
+- In general, we need this `KafkaListenerEndpointRegistry`, because we need way to:
+  - Find a specific listener container.
+  - Start it.
+  - Stop it.
+  - Pause it.
+  - Resume it.
+  - Check if it's running.
+  - Wait for partition assignment.
+
+- In the **tests** this is particular useful, for following reasons:
+  - Start before **Kafka is ready**.
+  - Start without **partitions**.
+  - Run **asynchronously**.
+  - **Miss** messages.
+  - Cause flaky tests.
+
+- We need to have way to check that **Kafka** is setted correctly before running the test.
+
 ````
     @BeforeEach
     void setUp() {
@@ -228,18 +251,20 @@ spring:
     }
 ````
 
-- The `KafkaListenerEndpointRegistry` holds the **listener containers**.
-  - Todo selvitä tämö
-````
-    @Autowired
-    KafkaListenerEndpointRegistry endpointRegistry;
-````
+- `ContainerTestUtils` is coming from the **Kafka library**.
+  - This is for the **Spring Kafka Test Utility** functions.
+    - We are using it as following:
+      - `ContainerTestUtils.waitForAssignment(messageListenerContainer, embeddedKafkaBroker.getPartitionsPerTopic());`.
+        - We need to be able to tell how many partitions will be assigned to **before we can conclude** the is **readiness**.
 
+<div align="center">
+    <img src="partitionsPerTopic.PNG"  alt="Apache Kafka for Developers using Spring Boot" width="400"/>
+</div>
 
-
+1. As reminder, in **Topic** there can be many **Partitions**. Here we are just deducting the **readiness** for the test! 
 
 <details>
-<summary id="IDE problem" open="false">Full configuration for these <b>Kafka</b> <code>application.yml</code>.</summary>
+<summary id="IDE problem" open="false">Full configuration at the end of chapter for <b>Kafka</b> <code>application.yml</code>.</summary>
 
 ````
 spring:
@@ -294,8 +319,48 @@ spring:
 </schema>
 </details>
 
-
 # Write the Integration test for posting a "NEW" LibraryEvent.
+
+- We are using this **JSON** for publishing Library event:
+
+````
+// Given.
+String json = " {\"libraryEventId\":null,\"libraryEventType\":\"NEW\",\"book\":{\"bookId\":456,\"bookName\":\"Kafka Using Spring Boot\",\"bookAuthor\":\"Dilip\"}}";
+kafkaTemplate.sendDefault(json).get();
+````
+
+
+- We will be **utilizing** the check [CountDownLatch](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html) link.
+
+
+
+- The full test:
+
+````
+    @Test
+    void publishNewLibraryEvent() throws ExecutionException, InterruptedException, JsonProcessingException {
+        //given
+        String json = " {\"libraryEventId\":null,\"libraryEventType\":\"NEW\",\"book\":{\"bookId\":456,\"bookName\":\"Kafka Using Spring Boot\",\"bookAuthor\":\"Dilip\"}}";
+        kafkaTemplate.sendDefault(json).get();
+
+        //when
+        CountDownLatch latch = new CountDownLatch(1);
+        latch.await(3, TimeUnit.SECONDS);
+
+        //then
+        verify(libraryEventsConsumerSpy, times(1)).onMessage(isA(ConsumerRecord.class));
+        verify(libraryEventsServiceSpy, times(1)).processLibraryEvent(isA(ConsumerRecord.class));
+
+        List<LibraryEvent> libraryEventList = (List<LibraryEvent>) libraryEventsRepository.findAll();
+        assert libraryEventList.size() == 1;
+        libraryEventList.forEach(libraryEvent -> {
+            assert libraryEvent.getLibraryEventId() != null;
+            assertEquals(456, libraryEvent.getBook().getBookId());
+        });
+
+    }
+````
+
 
 
 # Write the Integration test for posting a "UPDATE" LibraryEvent.

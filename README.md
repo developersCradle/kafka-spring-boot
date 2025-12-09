@@ -31,7 +31,7 @@ by **Pragmatic Code School** ©.
 > I was faced with speedy deadlines for integrating crucial bank connections. During testing, some of the embedded Kafka test pieces were behaving strangely, and messages weren’t being consumed as expected.
 >
 > Thankfully, a recent course I had taken proved crucial. It helped me pinpoint subtle serialization issues in the Kafka workflows<br><br>
-~ *DevelopersCradle*
+>~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -93,8 +93,8 @@ by **Pragmatic Code School** ©.
 > A tight delivery schedule forced me to integrate several critical banking streams in record time. While running the tests, the embedded Kafka setup began acting unpredictably—messages vanished, consumers stalled, and nothing made sense at first.
 >
 > Luckily, I had completed a training not long before, and one of its modules clicked immediately. It guided me straight to the root cause: a hidden mismatch in the Kafka serialization layer that was quietly breaking the entire flow.
-<br>
-~ DevelopersCradle
+><br>
+>~ DevelopersCradle
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -143,7 +143,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] `Integration Testing using Embedded Kafka - Kafka Consumer` do for now.
+- [ ] `Integration Testing using Embedded Kafka - Kafka Consumer` do this for now.
+- [ ] Do the `CountDownLatch` that is related to **Threads**. This is related to the `Integration Testing using Embedded Kafka - Kafka Consumer`.
+    - Do the [chapters](https://github.com/developersCradle/data-structures-algorithms-and-java-multithreading-concurrency-performance-optimization/tree/main/Java%20Multithreading%2C%20Concurrency%20%26%20Performance%20Optimization/Section%2008#chapter-08---inter-thread-communication).
 - [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2). ✅
 - [x] The commands, which are used in this course. [Here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2/blob/main/SetUpKafkaDocker.md#set-up-broker-and-zookeeper). ✅
