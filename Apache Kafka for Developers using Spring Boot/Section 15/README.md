@@ -329,10 +329,18 @@ String json = " {\"libraryEventId\":null,\"libraryEventType\":\"NEW\",\"book\":{
 kafkaTemplate.sendDefault(json).get();
 ````
 
+- We are making **asynchronous** call to Topic with the JSON.
+  - With the `.get()` it turns into **blocking call** → **synchronous call**.
+  
+````
+kafkaTemplate.sendDefault(json).get();
+````
+
+
 
 - We will be **utilizing** the check [CountDownLatch](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html) link.
 
-
+> `CountDownLatch` in nutshell →  You set a number, and the latch waits until that number reaches zero.
 
 - The full test:
 
@@ -357,16 +365,16 @@ kafkaTemplate.sendDefault(json).get();
             assert libraryEvent.getLibraryEventId() != null;
             assertEquals(456, libraryEvent.getBook().getBookId());
         });
-
     }
 ````
-
 
 
 # Write the Integration test for posting a "UPDATE" LibraryEvent.
 
 
+
 # Write the Integration test for posting an invalid UPDATE LibraryEvent.
+
 
 
 # Integration Tests for Real Databases using TestContainers.

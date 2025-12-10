@@ -92,8 +92,7 @@ by **Pragmatic Code School** ©.
 
 > A tight delivery schedule forced me to integrate several critical banking streams in record time. While running the tests, the embedded Kafka setup began acting unpredictably—messages vanished, consumers stalled, and nothing made sense at first.
 >
-> Luckily, I had completed a training not long before, and one of its modules clicked immediately. It guided me straight to the root cause: a hidden mismatch in the Kafka serialization layer that was quietly breaking the entire flow.
-><br>
+> Luckily, I had completed a training not long before, and one of its modules clicked immediately. It guided me straight to the root cause: a hidden mismatch in the Kafka serialization layer that was quietly breaking the entire flow.<br><br>
 >~ DevelopersCradle
 
 Contains my own notes with some course material to enforce learning experience.
