@@ -331,12 +331,10 @@ kafkaTemplate.sendDefault(json).get();
 
 - We are making **asynchronous** call to Topic with the JSON.
   - With the `.get()` it turns into **blocking call** → **synchronous call**.
-  
+
 ````
 kafkaTemplate.sendDefault(json).get();
 ````
-
-
 
 - We will be **utilizing** the check [CountDownLatch](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html) link.
 

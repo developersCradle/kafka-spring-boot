@@ -162,5 +162,4 @@ public class LibraryEventsConsumerIntegrationTest {
         verify(libraryEventsServiceSpy, times(10)).processLibraryEvent(isA(ConsumerRecord.class));
 
     }
-
 }

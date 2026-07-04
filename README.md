@@ -1,3 +1,56 @@
+<!-- 
+We are using following structure:
+
+<p align="center">
+    <img
+     src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
+    alt="Jackson quick start json serialization with java made easy caption!"
+    style="width:1600px;height:120px;"/>
+</p> 
+<p align="center">
+    <img
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    alt="Jackson quick start json serialization with java made easy description!"
+    style="width:590px; height:160px;" />
+</p>
+-->
+
+<!--
+Template for the questions:
+
+# Quiz 07: Atomic Operations, Volatile & Metrics Practical Example.
+
+<details>
+<summary id="Question_01" open="true"> <b>Question 01.</b> </summary>
+````yaml
+Question 01:
+The question comes here!
+
+- My answer:
+
+<div align="center">
+    <img src="Quiz 07/Q1.PNG" width="600"/>
+</div>
+
+1. Add here the answer!
+
+</details>
+-->
+
+<!-- 
+Template for the task/exercies:
+ 
+# Lab Exercise - Mapping Collections of Value Types.
+
+<div align="center">
+    <img src="add here the exercise!" alt="hibernate course" width=" 500"/>
+</div>
+
+1. **Question 1:** add here the question from the test!
+	- **Answer:** **D**. here can be the examplaniton!
+ -->
+
+
 <p align="center">
     <img id="studying" src="message and streaming platforms.png" style="height: 300px; width: 600px;">
 </p>
@@ -79,13 +132,28 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Check the running with the `.sh` in widows `ZooKeepper` and the Kafka server.
 
 
+
+
 <p align="center">
+    <img
+     src="Apache_Kafka_For_Developers_Using_Spring_Boot_Caption.png"
+    alt="Jackson quick start json serialization with java made easy caption!"
+    style="width:1600px;height:120px;"/>
+</p> 
+<p align="center">
+    <img
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Apache_Kafka_For_Developers_Using_Spring_Boot_Description.PNG"
+    alt="Jackson quick start json serialization with java made easy description!"
+    style="width:590px; height:160px;" />
+</p>
+
+<!-- <p align="center">
        <img src="Apache Kafka for Developers using Spring Boot caption.png" alt="Apache Kafka for Developers using Spring Boot" style="width: 800px; height:140px"/>
 </p>
 
 <p align="center">
     <img id="Kafka for Developers using Spring Boot" src="Apache Kafka for Developers using Spring Boot desc.PNG" style="width: 900px;">
-</p>
+</p> -->
 
 All course material from Apache Kafka for Developers using Spring Boot
 by **Pragmatic Code School** ©. 
@@ -148,3 +216,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Get know of the Publish–Subscribe (pub/sub) model. Since this is related to Kafka.    
 - [x] The repository for the code is [here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2). ✅
 - [x] The commands, which are used in this course. [Here](https://github.com/dilipsundarraj1/kafka-for-developers-using-spring-boot-v2/blob/main/SetUpKafkaDocker.md#set-up-broker-and-zookeeper). ✅
+
+
+
+
+
+At 🏛️Nordea🏛️, we were integrating the Group KYC (GKYC) platform with several downstream applications through Kafka. The messages published by GKYC couldn't be consumed directly by every system. Different consumers required different message formats—some needed fields to be renamed, others required certain attributes to be removed, and a few expected additional metadata before processing the events.
+
+Our first instinct was to build a dedicated transformation microservice. However, that would have meant introducing another component to develop, deploy, monitor, and maintain.
+
+A recent course I had taken on *Kafka Connect: Building Data Pipelines with Kafka* proved incredibly useful. It showed how to leverage Kafka Connect Single Message Transforms (SMTs) to perform message transformations directly within the connector. Instead of writing custom code, we configured transformations to rename fields, drop sensitive information, add static values, and reshape the GKYC events before they reached the target systems.
+
+By keeping these transformations inside Kafka Connect, we reduced operational complexity, eliminated an unnecessary service, and made it much easier to adapt when new consumers with different requirements were introduced.
+
+~ DevelopersCradle
+
+
