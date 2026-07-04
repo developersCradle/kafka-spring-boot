@@ -250,6 +250,7 @@ This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/Inte
 Also, the course projects are migrated to the use the ![Maven](https://img.shields.io/badge/apachemaven-C71A36.svg?style=for-the-badge&logo=apachemaven&logoColor=white) since I am more familiar with it.
 
 [The course at Udemy](https://www.udemy.com/course/kafka-connect-building-data-pipelines-with-kafka). 
+
 [Content maker](https://www.appsdeveloperblog.com/).
 
 
@@ -272,15 +273,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction
-- [ ] [Section 02](#) - Software
-- [ ] [Section 03](#) - Apache Kafka Cluster
-- [ ] [Section 04](#) - Kafka Connect Connectors
-- [ ] [Section 05](#) - Kafka Connect Standalone mode - Using CLI scripts
-- [ ] [Section 06](#) - Kafka Connect Standalone mode - In Docker container
-- [ ] [Section 07](#) - Kafka Connect Cluster in Distributed Mode using CLI
-- [ ] [Section 08](#) - Managing Kafka Connect Cluster running in Distributed mode with REST API
-- [ ] [Section 09](#) - Kafka Connect Cluster in Distributed Mode with Docker
+- [x] [Section 01](#) - Introduction. ✅
+- [x] [Section 02](#) - Software. ✅
+- [x] [Section 03](#) - Apache Kafka Cluster. ✅
+- [x] [Section 04](#) - Kafka Connect Connectors. ✅
+- [x] [Section 05](#) - Kafka Connect Standalone mode - Using CLI scripts. ✅
+- [x] [Section 06](#) - Kafka Connect Standalone mode - In Docker container. ✅
+- [x] [Section 07](#) - Kafka Connect Cluster in Distributed Mode using CLI. ✅
+- [x] [Section 08](#) - Managing Kafka Connect Cluster running in Distributed mode with REST API. ✅
+- [x] [Section 09](#) - Kafka Connect Cluster in Distributed Mode with Docker. ✅
 
 #### Additional stuff.
 
